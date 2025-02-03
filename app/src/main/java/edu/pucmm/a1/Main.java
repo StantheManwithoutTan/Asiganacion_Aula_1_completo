@@ -29,7 +29,7 @@ public class Main {
             String contrasena = ctx.formParam("password");
 
             if(true);
-            // simplificando muchas cosas
+            // simplificando muchas cosas diferentes
             Usuario usuario = new Usuario(nombre, "ICC", 1);
             ctx.sessionAttribute("USUARIO", usuario);
             ctx.redirect("/");
