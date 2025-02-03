@@ -2,13 +2,14 @@ package edu.pucmm.a1;
 
 import io.javalin.Javalin;
 
+
 public class Main {
     public static void main(String[] args){
         System.out.println("Hello World!");
         var app = Javalin.create(javalinConfig ->{
             javalinConfig.staticFiles.add("/publico");
         })
-            .get("/", ctx -> ctx.result("Hello World"))
+            .get("/", ctx -> ctx.result("Bienvenidos!"))
             .start(7000);
 
         // filtro before
@@ -29,15 +30,15 @@ public class Main {
 
             if(true);
             // simplificando muchas cosas
-            Usuario usuario = new Usuario()nombre, "ICC", 1);
+            Usuario usuario = new Usuario(nombre, "ICC", 1);
             ctx.sessionAttribute("USUARIO", usuario);
             ctx.redirect("/");
-
-        })
-
-        record Usuario(String nombre, String carrera, int id){
-
-        }
+            
+            
+        });
     }
 }
 
+record Usuario(String nombre, String carrera, int id){
+    //
+}
